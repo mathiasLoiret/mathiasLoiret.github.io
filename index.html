@@ -1,7 +1,331 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>CoreUI - Vue Open Source Bootstrap Admin Template</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script><script>window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Vue.js ID
-      gtag('config', 'UA-118965717-7');</script><link href=/css/chunk-04ea5f91.603305bb.css rel=prefetch><link href=/css/chunk-0d670126.3e45d735.css rel=prefetch><link href=/css/chunk-2cea329e.ca23e272.css rel=prefetch><link href=/css/chunk-5d596d00.28a1c86e.css rel=prefetch><link href=/css/chunk-6e162e2c.f9208b90.css rel=prefetch><link href=/css/chunk-723e35a4.aa60a922.css rel=prefetch><link href=/css/chunk-780074de.1bcb393c.css rel=prefetch><link href=/css/chunk-fd7ebe64.349de66d.css rel=prefetch><link href=/js/chunk-04ea5f91.7f742e51.js rel=prefetch><link href=/js/chunk-0d670126.6802350c.js rel=prefetch><link href=/js/chunk-0e30ae7d.1cf0fb7d.js rel=prefetch><link href=/js/chunk-15b5e2c8.b9ba7bfc.js rel=prefetch><link href=/js/chunk-2cea329e.690063b0.js rel=prefetch><link href=/js/chunk-2d0a400c.c98ae6e2.js rel=prefetch><link href=/js/chunk-2d0a443e.bdfca76c.js rel=prefetch><link href=/js/chunk-2d0ab2eb.b5b78e17.js rel=prefetch><link href=/js/chunk-2d0ae5e6.0854e393.js rel=prefetch><link href=/js/chunk-2d0ae943.9f66fc1b.js rel=prefetch><link href=/js/chunk-2d0b1bf6.ec19a1fa.js rel=prefetch><link href=/js/chunk-2d0b59e9.b637635c.js rel=prefetch><link href=/js/chunk-2d0bd794.a709493b.js rel=prefetch><link href=/js/chunk-2d0c4303.ade85684.js rel=prefetch><link href=/js/chunk-2d0d3e27.3728cea2.js rel=prefetch><link href=/js/chunk-2d0de2d9.2c0257b0.js rel=prefetch><link href=/js/chunk-2d0de6aa.a0119de2.js rel=prefetch><link href=/js/chunk-2d0e1d93.c7e506d9.js rel=prefetch><link href=/js/chunk-2d0e9b8f.000f29ba.js rel=prefetch><link href=/js/chunk-2d0f06bd.d5e881c6.js rel=prefetch><link href=/js/chunk-2d0f0ba2.d307a55b.js rel=prefetch><link href=/js/chunk-2d0f0c1b.d79a0903.js rel=prefetch><link href=/js/chunk-2d208124.3ad4047d.js rel=prefetch><link href=/js/chunk-2d2131a8.15f1247a.js rel=prefetch><link href=/js/chunk-2d21444c.e528daef.js rel=prefetch><link href=/js/chunk-2d2183eb.205283f5.js rel=prefetch><link href=/js/chunk-2d21e6d0.14923047.js rel=prefetch><link href=/js/chunk-2d21eae7.3646f93d.js rel=prefetch><link href=/js/chunk-2d222779.c3c09cde.js rel=prefetch><link href=/js/chunk-2d224eb7.7c8b27c2.js rel=prefetch><link href=/js/chunk-2d226319.6022feb3.js rel=prefetch><link href=/js/chunk-2d229411.94ecb966.js rel=prefetch><link href=/js/chunk-2d22c303.1f41cb51.js rel=prefetch><link href=/js/chunk-2d22d610.198a2602.js rel=prefetch><link href=/js/chunk-2d23777b.57e2fb36.js rel=prefetch><link href=/js/chunk-40f4cc33.90f4aef3.js rel=prefetch><link href=/js/chunk-4e1d4169.c4fcd931.js rel=prefetch><link href=/js/chunk-4e1f9f1b.2f9c92c8.js rel=prefetch><link href=/js/chunk-5d596d00.f90a7f86.js rel=prefetch><link href=/js/chunk-6e162e2c.1c8c2986.js rel=prefetch><link href=/js/chunk-6f634880.09bf3a8e.js rel=prefetch><link href=/js/chunk-723e35a4.733831fd.js rel=prefetch><link href=/js/chunk-72bec34c.8886e2b1.js rel=prefetch><link href=/js/chunk-780074de.db291959.js rel=prefetch><link href=/js/chunk-a20b3cce.01f564d7.js rel=prefetch><link href=/js/chunk-a9adb17c.82131206.js rel=prefetch><link href=/js/chunk-c7051a8e.ad5938bb.js rel=prefetch><link href=/js/chunk-fd7ebe64.3cc5ec91.js rel=prefetch><link href=/css/app.e44059d8.css rel=preload as=style><link href=/css/chunk-vendors.0fa25766.css rel=preload as=style><link href=/js/app.931d374d.js rel=preload as=script><link href=/js/chunk-vendors.cc815d76.js rel=preload as=script><link href=/css/chunk-vendors.0fa25766.css rel=stylesheet><link href=/css/app.e44059d8.css rel=stylesheet></head><body><noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.cc815d76.js></script><script src=/js/app.931d374d.js></script></body></html>
+<!DOCTYPE html>
+<html lang="fr" ng-app="app">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/united/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>L'Éternelle moisson - Ma Grosse Bihilète</title>
+</head>
+
+<body ng-controller="AppCtrl as appCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">L'Éternelle moisson ({{ appCtrl.owned() }}/{{ appCtrl.monsters.length }})</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: appCtrl.sorting == 0}"><a href="#" ng-click="appCtrl.chooseSorting(0)">Ordre alphabétique</a></li>
+                    <li ng-class="{active: appCtrl.sorting == 1}"><a href="#" ng-click="appCtrl.chooseSorting(1)">Zones</a></li>
+                    <li ng-class="{active: appCtrl.sorting == 2}"><a href="#" ng-click="appCtrl.chooseSorting(2)">Étapes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-toggle="modal" data-target="#saveModal">Save / RAZ</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#helpModal">Aide</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#aboutModal">A propos</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="mgbPresentation">
+            <div class="mgbPresentation">
+            <img class="mgbLogo" src="imgs/MGB.png" alt="logo-guilde">
+            <p class="mgbTitle">Ma Grose Bihilète</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3">
+                                Monstres : {{ appCtrl.owned('monster') }}/{{ appCtrl.total('monster') }}
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ appCtrl.ownedPercentage('monster') }}" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{ appCtrl.ownedPercentage('monster') }}%;">
+                                    {{ appCtrl.ownedPercentage('monster') }}%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                Boss : {{ appCtrl.owned('boss') }}/{{ appCtrl.total('boss') }}
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ appCtrl.ownedPercentage('boss') }}" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{ appCtrl.ownedPercentage('boss') }}%;">
+                                    {{ appCtrl.ownedPercentage('boss') }}%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                Archimonstres : {{ appCtrl.owned('archi') }}/{{ appCtrl.total('archi') }}
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ appCtrl.ownedPercentage('archi') }}" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{ appCtrl.ownedPercentage('archi') }}%;">
+                                    {{ appCtrl.ownedPercentage('archi') }}%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                Etapes : {{ appCtrl.completedSteps() }}/{{ appCtrl.totalSteps }}
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ appCtrl.ownedPercentage('archi') }}" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{ appCtrl.ownedPercentage('archi') }}%;">
+                                    {{ appCtrl.ownedPercentage('archi') }}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        Total des monstres capturés : {{ appCtrl.owned() }}/{{ appCtrl.monsters.length }}
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ appCtrl.ownedPercentage() }}" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: {{ appCtrl.ownedPercentage() }}%;">
+                            {{ appCtrl.ownedPercentage() }}%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-stripped table-hover table-bordered" ng-if="appCtrl.sorting == 0">
+                    <thead>
+                        <tr>
+                            <th style="width:50px;">Possédé</th>
+                            <th>Nom</th>
+                            <th>Zones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="monster in appCtrl.monsters | orderBy:'name'" ng-class="{success: appCtrl.isOwned(monster)}" ng-click="appCtrl.toggleMonster(monster)">
+                            <td><input type="checkbox" ng-checked="appCtrl.isOwned(monster)" /></td>
+                            <td>
+                                <i class="glyphicon glyphicon-star" ng-if="monster.type == 'boss'"></i>
+                                <i class="glyphicon glyphicon-fire" ng-if="monster.type == 'archi'"></i>
+                                {{ monster.name }}
+                            </td>
+                            <td>
+                                <span class="label label-primary" ng-repeat="zone in monster.zones">{{ zone }}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div ng-if="appCtrl.sorting == 1">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="appCtrl.displayFinishedZones" ng-change="appCtrl.toggleFinishedZones()" /> Masquer les zones terminées
+                        </label>
+                    </div>
+                    <div class="panel panel-default" ng-repeat="(zone, monsters) in appCtrl.zones" ng-hide="appCtrl.displayFinishedZones && appCtrl.owned(false, zone) == appCtrl.total(false, zone)">
+                        <div class="panel-heading">
+                            {{ zone }} ({{ appCtrl.owned(false, zone) }}/{{ appCtrl.total(false, zone) }})
+
+                            <div class="pull-right">
+                                <button class="btn btn-info btn-xs" ng-click="appCtrl.toggleZone(zone)">
+                                    Tout <span ng-if="appCtrl.owned(false, zone) == appCtrl.total(false, zone)">dé</span>cocher
+                                </button>
+                            </div>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width:50px;">Possédé</th>
+                                    <th>Nom</th>
+                                    <th>Zones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr ng-repeat="monster in monsters" ng-class="{success: appCtrl.isOwned(monster)}" ng-click="appCtrl.toggleMonster(monster)">
+                                    <td><input type="checkbox" ng-checked="appCtrl.isOwned(monster)" /></td>
+                                    <td>
+                                        <i class="glyphicon glyphicon-star" ng-if="monster.type == 'boss'"></i>
+                                        <i class="glyphicon glyphicon-fire" ng-if="monster.type == 'archi'"></i>
+                                        {{ monster.name }}
+                                    </td>
+                                    <td>
+                                        <span class="label label-primary" ng-repeat="zone in monster.zones">{{ zone }}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div ng-if="appCtrl.sorting == 2">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="appCtrl.displayFinishedSteps" ng-change="appCtrl.toggleFinishedSteps()" /> Masquer les étapes terminées
+                        </label>
+                    </div>
+                    <div class="panel panel-default" ng-repeat="(step, monsters) in appCtrl.steps" ng-hide="step == 0 || (appCtrl.displayFinishedSteps && appCtrl.owned(false, false, step) == appCtrl.total(false, false, step))">
+                        <div class="panel-heading">
+                            Étape {{ step }} ({{ appCtrl.owned(false, false, step) }}/{{ appCtrl.total(false, false, step) }})
+
+                            <div class="pull-right">
+                                <button class="btn btn-info btn-xs" ng-click="appCtrl.toggleStep(step)">
+                                    Tout <span ng-if="appCtrl.owned(false, false, step) == appCtrl.total(false, false, step)">dé</span>cocher
+                                </button>
+                            </div>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width:50px;">Possédé</th>
+                                    <th>Nom</th>
+                                    <th>Zones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr ng-repeat="monster in monsters" ng-class="{success: appCtrl.isOwned(monster)}" ng-click="appCtrl.toggleMonster(monster)">
+                                    <td><input type="checkbox" ng-checked="appCtrl.isOwned(monster)" /></td>
+                                    <td>
+                                        <i class="glyphicon glyphicon-star" ng-if="monster.type == 'boss'"></i>
+                                        <i class="glyphicon glyphicon-fire" ng-if="monster.type == 'archi'"></i>
+                                        {{ monster.name }}
+                                    </td>
+                                    <td>
+                                        <span class="label label-primary" ng-repeat="zone in monster.zones">{{ zone }}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p>
+                    Cet outil facilite la gestion de la quête du Dofus Ocre.
+                    <a href="https://github.com/Mopolo/Eternelle-Moisson">Voir sur Github</a>
+                    <span class="pull-right">Dofus est la propriété d'Ankama</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="saveModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="saveModalLabel">Gestion de la sauvegarde</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputSave">Sauvegarde actuelle</label>
+                        <input type="text" name="save" id="inputSave" class="form-control" ng-model="appCtrl.saveData" />
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group">
+                        <label for="inputLoad">Charger une sauvegarde</label>
+                        <div class="input-group">
+                            <input type="text" name="load" id="inputLoad" class="form-control" ng-model="appCtrl.loadData" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button" ng-click="appCtrl.load()" ng-disabled="!appCtrl.loadData.length">Charger</button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="text-center">
+                        <h4>ATTENTION CELA VA TOUT EFFACER !!</h4>
+                        <button class="btn btn-danger" ng-click="appCtrl.resetAll()">Remise à zéro</button>
+                    </div>
+
+                    <p class="text-danger" ng-show="appCtrl.loadData.length">Attention ! Charger une sauvegarde effacera les données actuelles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="helpModalLabel">Aide</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Cet outils permet de faciliter la gestion de la quête du Dofus Ocre.
+                    </p>
+
+                    <p>
+                        Pour ajouter ou supprimer un monstre il suffit de cliquer sur sa ligne.<br />
+                        La sauvegarde se fait automatiquement et il n'y a pas besoin de compte.<br />
+                        Les données sont enregistrées localement dans le navigateur. Vous pouvez donc fermer la page
+                        et revenir plus tard.
+                    </p>
+
+                    <p>
+                        Si vous changez de navigateur vous pouvez exporter la sauvegarde pour la charger plus tard.
+                    </p>
+
+                    <p>
+                        Si vous trouvez un bug ou si la liste des monstres n'est pas à jour,
+                        contactez "Matratio" ou "Naekhan" par MP dans le jeu.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="aboutModalLabel">A Propos de Ma Grosse Bihilète</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Cette guilde à pour ambition de dominer le monde des douze à moyen terme et de rester toujours vivante à plus court terme.
+                    </p>
+
+                    <p>
+                        Tous les joueurs sont les bienvenus dans la guilde.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.locker/2.0.4/angular-locker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
